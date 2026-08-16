@@ -1,0 +1,12 @@
+# Node / Extension
+node_modules/
+*.vsix
+.vscode-test/
+
+# Python / Django
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+venv/
+env/

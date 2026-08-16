@@ -1,0 +1,35 @@
+{
+  "name": "worklens",
+  "displayName": "WorkLens",
+  "description": "Capture selected code and send for analysis",
+  "version": "0.0.1",
+  "publisher": "worklens-dev",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "worklens.analyzeCode",
+        "title": "WorkLens: Analyze Selection"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "worklens.analyzeCode",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0"
+  }
+}
